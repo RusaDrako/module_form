@@ -1,0 +1,114 @@
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>Example</title>
+
+	<link href="./module_form.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="./module_form.js"></script>
+
+
+<style>
+	input, select, textarea {
+		width: 200px;
+		padding: 10px 10px;
+	}
+</style>
+
+</head>
+
+
+<body lang="ru">
+
+	<div style="position: relative; display: inline-block; width: 450px; border: 1px solid #777;">
+
+		<br>
+		<input type="text" value="" placeholder="Логин"/>
+		<input type="password" value="" placeholder="Пароль"/>
+		<br>
+		<br>
+		<input type="text" value="123" placeholder="Логин"/>
+		<input type="password" value="123" placeholder="Пароль"/>
+		<br>
+		<br>
+		<input type="text" value="" placeholder="Логин" style="padding-top: 40px;"/>
+		<input type="password" value="" placeholder="Пароль" style="padding-top: 40px;"/>
+		<br>
+		<br>
+		<textarea placeholder="Сообщение"></textarea>
+		<input type="text" value="" placeholder="Пароль"/>
+		<br>
+		<br>
+		<textarea placeholder="Сообщение"></textarea>
+		<br>
+		<br>
+		<select>
+			<option>Пункт 1</option>
+			<option>Пункт 2</option>
+			<option>Пункт 3</option>
+			<option>Пункт 4</option>
+			<option>Пункт 5</option>
+		</select>
+		<br>
+		<br>
+
+		<a href="javascript:module_form.start();">
+			Test 1
+		</a>
+
+
+	</div>
+
+	<div style="position: relative; display: inline-block; width: 450px; border: 1px solid #777;">
+
+		<br>
+		<input type="text" value="" module_form__placeholder="Логин"/>
+		<input type="password" value="" module_form__placeholder="Пароль"/>
+		<br>
+		<br>
+		<input type="text" value="123" module_form__placeholder="Логин"/>
+		<input type="password" value="123" module_form__placeholder="Пароль"/>
+		<br>
+		<br>
+		<input type="text" value="" module_form__placeholder="Логин" style="padding-top: 40px;"/>
+		<input type="password" value="" module_form__placeholder="Пароль" style="padding-top: 40px;"/>
+		<br>
+		<br>
+		<textarea module_form__placeholder="Сообщение"></textarea>
+		<input type="password" value="" module_form__placeholder="Пароль"/>
+		<br>
+		<br>
+		<textarea module_form__placeholder="Сообщение"></textarea>
+		<br>
+		<br>
+		<select module_form__placeholder="Категория">
+			<option>Пункт 1</option>
+			<option>Пункт 2</option>
+			<option>Пункт 3</option>
+			<option>Пункт 4</option>
+			<option>Пункт 5</option>
+		</select>
+		<br>
+		<br>
+
+		<a href="javascript:module_form.start();">
+			Test 1
+		</a>
+
+
+	</div>
+
+
+	<script type="text/javascript">
+		/**/
+		jQuery(document).ready(function() {
+			module_form.start();
+		});/**/
+	</script>
+
+
+
+
+</body>
+</html>
