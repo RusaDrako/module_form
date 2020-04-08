@@ -37,7 +37,9 @@
 	/** Создание элемента обёртки */
 	function _create_wrap($_item_obj) {
 		var $display =  $_item_obj.css('display');
-		$display = ($display == 'inline' && $_item_obj.is("textarea"))
+		$display = ($_item_obj.is("textarea")
+				&& ($display == 'inline'
+						|| $display == 'inline-block'))
 			? 'inline-flex'
 			: $display;
 		var $_warp = $('<div></div>')

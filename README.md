@@ -7,8 +7,8 @@ ____
 2. [Заголовок редактируемого поля](#Заголовок-редактируемого-поля)
 
 ## Запуск модуля
-```javascrip
-object_module.start()
+```JavaScript
+module_form.start()
 ```
 
 [:arrow_up:Оглавление](#Оглавление)
@@ -24,3 +24,5 @@ object_module.start()
 ```
 
 [:arrow_up:Оглавление](#Оглавление)
+
+[![Logo](https://avatars0.githubusercontent.com/u/32844979?s=50 "RusaDrako")](https://github.com/RusaDrako/)
