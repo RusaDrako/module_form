@@ -6,14 +6,14 @@
 
 
 /** Модуль презентации элементов страницы.
- *	@version 0.0.1
+ *	@version 0.0.2
  *	@author Leonid Petukhov
  */
 (function($) {
 	/** Имя модуля */
 	var MODULE_NAME = 'module_form';
 	/** Версия модуля */
-	var MODULE_VERSION = '0.0.1';
+	var MODULE_VERSION = '0.0.2';
 	/** Автор модуля */
 	var MODULE_AUTHOR = 'Петухов Леонид';
 	/** Дата релиза модуля */
@@ -132,8 +132,10 @@
 			};
 			// Функция настроек при пустом поле
 			var $func_title = function() {
-				// Значение пустое
-				if (!$_item_obj.val()) {
+				// Значение пустое и это не выпадающий список
+				if (!$_item_obj.val()
+						&& !$_item_obj.is('select')
+					) {
 					$_title.css('paddingTop', _get_padding_middle($_item_obj));
 					$_title.css('fontSize', $_item_obj.css('fontSize'));
 				// Значение заполнено
