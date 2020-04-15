@@ -1,8 +1,8 @@
 # Модуль оформления формы (module_form) ver: 0.0.3
 ____
 
-![license](https://img.shields.io/github/license/RusaDrako/module_form?style=static)
-![license](https://img.shields.io/github/v/release/RusaDrako/module_form?style=static)
+![license](https://img.shields.io/github/license/RusaDrako/module_form?style=plastic)
+![release](https://img.shields.io/github/v/release/RusaDrako/module_form?style=plastic)
 
 ## Оглавление
 
