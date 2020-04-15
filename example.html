@@ -23,7 +23,6 @@
 
 	<div style="position: relative; display: inline-block; width: 450px; border: 1px solid #777;">
 
-		<br>
 		<input type="text" value="" placeholder="Логин"/>
 		<input type="password" value="" placeholder="Пароль"/>
 		<br>
@@ -75,7 +74,6 @@
 
 	<div style="position: relative; display: inline-block; width: 450px; border: 1px solid #777;">
 
-		<br>
 		<input type="text" value="" module_form__placeholder="Логин"/>
 		<input type="password" value="" module_form__placeholder="Пароль"/>
 		<br>
@@ -124,6 +122,42 @@
 
 
 	</div>
+
+<br><br>
+
+<div style="position: relative; display: inline-block; width: 450px; border: 1px solid #777;">
+
+	<textarea style="width: 450px; height: 150px;" maxlength="512"
+			module_form__placeholder="Максимальная длина текст 512 ситмволов"
+			module_form__limiter="512"
+			module_form__countdown="countdown_1,512"
+	>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+	<br>
+	<p>Осталось символов: <b><span id="countdown_1"></span></b></p>
+	<br>
+	<br>
+
+	<textarea style="width: 450px; height: 150px;"
+			module_form__placeholder="Максимальная длина текст 256 ситмволов"
+			module_form__limiter="256"
+			module_form__countdown="countdown_2,256"
+			module_form__count="count_2"
+	></textarea>
+	<br>
+	<p>Осталось символов: <b><span id="countdown_2"></span></b></p>
+	<p>Символов: <b><span id="count_2"></span></b></p>
+
+	<input type="text" style="width: 450px;"
+			module_form__placeholder="Максимальная длина текст 15 ситмволов"
+			module_form__limiter="15"
+			module_form__countdown="countdown_3,15"
+			module_form__count="count_3"
+	>
+	<br>
+	<p>Осталось символов: <b><span id="countdown_3"></span></b></p>
+	<p>Символов: <b><span id="count_3">512</span></b></p>
+
+</div>
 
 
 	<script type="text/javascript">

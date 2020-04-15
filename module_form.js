@@ -6,18 +6,18 @@
 
 
 /** Модуль презентации элементов страницы.
- *	@version 0.0.2
+ *	@version 0.0.3
  *	@author Leonid Petukhov
  */
 (function($) {
 	/** Имя модуля */
 	var MODULE_NAME = 'module_form';
 	/** Версия модуля */
-	var MODULE_VERSION = '0.0.2';
+	var MODULE_VERSION = '0.0.3';
 	/** Автор модуля */
 	var MODULE_AUTHOR = 'Петухов Леонид';
 	/** Дата релиза модуля */
-	var MODULE_DATE = '2020-04-07';
+	var MODULE_DATE = '2020-04-15';
 	/** Описание модуля */
 	var MODULE_DESCRIPTION = 'Модуль оформления формы.';
 
@@ -163,9 +163,121 @@
 
 
 
+	/** Формирует элементы ограничивающий длинну строки */
+	function _add_limiter() {
+		// Массив обрабатываемых элементов
+		var $_obj = $('[' + MODULE_NAME + '__limiter' + ']');
+		// Чистим предыдущие настройки
+		_add_title_clean($_obj);
+//		console.log($_obj);
+		// Проходим по элементам списка
+		$_obj.each(function(index) {
+			// Конкретный элемент списка
+			var $_item_obj = $(this);
+			var $_item_count = $_item_obj.attr(MODULE_NAME + '__limiter');
+
+			var $func = function() {
+				var text = $_item_obj.val();
+				var count = text.length;
+				if (count > $_item_count) {
+					$_item_obj.val(text.substr(0,$_item_count));
+				}
+			}
+
+			$_item_obj.keydown($func);
+			$_item_obj.keyup($func);
+			$_item_obj.change($func);
+			// Абработка поля
+			$func();
+		});
+	}
+
+
+
+
+
+
+	/** Формирует события для вывод оставшегося кол-ва символов */
+	function _add_countdown() {
+		// Массив обрабатываемых элементов
+		var $_obj = $('[' + MODULE_NAME + '__countdown' + ']');
+		// Чистим предыдущие настройки
+		_add_title_clean($_obj);
+//		console.log($_obj);
+		// Проходим по элементам списка
+		$_obj.each(function(index) {
+			// Конкретный элемент списка
+			var $_item_obj = $(this);
+			var $_item_set = $_item_obj.attr(MODULE_NAME + '__countdown').split(',');
+			if ($_item_set.length == 2) {
+				var $_target = $_item_set[0];
+				var $_count = $_item_set[1];
+				var $func = function() {
+					var count = $_item_obj.val().length;
+					$('#' + $_target).html($_count - count);
+				}
+
+				$_item_obj.keydown($func);
+				$_item_obj.keyup($func);
+				$_item_obj.change($func);
+				// Абработка поля
+				$func();
+			}
+		});
+	}
+
+
+
+
+
+	/** Формирует события для вывод кол-ва символов */
+	function _add_count() {
+		// Массив обрабатываемых элементов
+		var $_obj = $('[' + MODULE_NAME + '__count' + ']');
+		// Чистим предыдущие настройки
+		_add_title_clean($_obj);
+//		console.log($_obj);
+		// Проходим по элементам списка
+		$_obj.each(function(index) {
+			// Конкретный элемент списка
+			var $_item_obj = $(this);
+			var $_target = $_item_obj.attr(MODULE_NAME + '__count');
+			var $func = function() {
+				var count = $_item_obj.val().length;
+				$('#' + $_target).html(count);
+			}
+
+			$_item_obj.keydown($func);
+			$_item_obj.keyup($func);
+			$_item_obj.change($func);
+			// Абработка поля
+			$func();
+		});
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/** Открытие модуля */
 	object_module.start = function() {
+		// Присвоение событий подсчёта символов
+		_add_limiter();
+		_add_count();
+		_add_countdown();
 		// Создание заголовков
+		// _add_title - должна быть последней (иначе не отрабатывает)
 		_add_title();
 	};
 
