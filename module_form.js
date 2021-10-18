@@ -5,7 +5,7 @@
 
 
 
-/** Модуль презентации элементов страницы.
+/**
  *	@version 0.0.3
  *	@author Leonid Petukhov
  */
@@ -309,7 +309,7 @@
 
 
 
-	window.module_form = object_module;
+	window[MODULE_NAME] = object_module;
 
 /**/
 }(jQuery));
