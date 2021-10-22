@@ -5,10 +5,7 @@
 
 
 
-/**
- *	@version 0.0.3
- *	@author Leonid Petukhov
- */
+/** */
 (function($) {
 	/** Имя модуля */
 	var MODULE_NAME = 'module_form';
