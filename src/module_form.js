@@ -10,7 +10,7 @@
 	/** Имя модуля */
 	var MODULE_NAME = 'module_form';
 	/** Версия модуля */
-	var MODULE_VERSION = '0.0.3';
+	var MODULE_VERSION = '1.0.0';
 	/** Автор модуля */
 	var MODULE_AUTHOR = 'Петухов Леонид';
 	/** Дата релиза модуля */
