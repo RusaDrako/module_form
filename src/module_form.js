@@ -1,9 +1,5 @@
-/** Тестировалось на библиотеки jQuery v3.2.1 */
-
 // Включаем строгий режим
 "use strict";
-
-
 
 /** */
 (function($) {
@@ -18,17 +14,8 @@
 	/** Описание модуля */
 	var MODULE_DESCRIPTION = 'Модуль оформления формы.';
 
-
 	/** Объект */
 	var object_module = {};
-
-
-
-
-
-
-
-
 
 
 	/** Создание элемента обёртки */
@@ -49,10 +36,6 @@
 		$_item_obj.wrap($_warp);
 	}
 
-
-
-
-
 	/** Создание элемента заголовка */
 	function _create_title($_item_obj) {
 			var $_padding = Number.parseInt($_item_obj.css('paddingTop'));
@@ -63,10 +46,6 @@
 			$_item_obj.before($_title);
 			return $_title;
 	}
-
-
-
-
 
 	/** Получение отступа сверху для title */
 	function _get_padding_title_null($_item_obj, $_title) {
@@ -79,10 +58,6 @@
 		return $_padding_top_new;
 	}
 
-
-
-
-
 	/** Получение среднее значение padding (верх/низ) для элемента */
 	function _get_padding_middle($_obj) {
 		var $_padding_t = Number.parseInt($_obj.css('paddingTop'));
@@ -91,19 +66,11 @@
 		return $_padding;
 	}
 
-
-
-
-
 	/** Очищает от элементов надстройки для заголвка поля */
 	function _add_title_clean($_obj) {
 		$('[' + MODULE_NAME + '__title]').replaceWith('');
 		$_obj.parent('[' + MODULE_NAME + '__wrap]').children($_obj).unwrap();
 	}
-
-
-
-
 
 	/** Формирует элементы надстройки для заголвка поля + реакции */
 	function _add_title() {
@@ -153,13 +120,6 @@
 
 
 
-
-
-
-
-
-
-
 	/** Формирует элементы ограничивающий длинну строки */
 	function _add_limiter() {
 		// Массив обрабатываемых элементов
@@ -188,11 +148,6 @@
 			$func();
 		});
 	}
-
-
-
-
-
 
 	/** Формирует события для вывод оставшегося кол-ва символов */
 	function _add_countdown() {
@@ -223,10 +178,6 @@
 		});
 	}
 
-
-
-
-
 	/** Формирует события для вывод кол-ва символов */
 	function _add_count() {
 		// Массив обрабатываемых элементов
@@ -254,19 +205,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 	/** Открытие модуля */
 	object_module.start = function() {
 		// Присвоение событий подсчёта символов
@@ -277,10 +215,6 @@
 		// _add_title - должна быть последней (иначе не отрабатывает)
 		_add_title();
 	};
-
-
-
-
 
 	/** Возвращает объект с информацией о модуле */
 	object_module.info = function() {
@@ -293,18 +227,10 @@
 		};
 	};
 
-
-
-
-
 	/** Выводит сообщение с информацией о модуле */
 	object_module.about = function() {
 		alert(MODULE_NAME + '\nВерсия: ' + MODULE_VERSION + '\nДата: ' + MODULE_DATE + '\nРазработчик: ' + MODULE_AUTHOR + '\n\n' + MODULE_DESCRIPTION);
 	};
-
-
-
-
 
 	window[MODULE_NAME] = object_module;
 
